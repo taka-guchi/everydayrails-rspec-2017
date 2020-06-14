@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 20170829013421) do
 
-  create_table "notes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
+  create_table "notes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.text "message"
     t.bigint "project_id"
     t.bigint "user_id"
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20170829013421) do
     t.index ["user_id"], name: "index_notes_on_user_id"
   end
 
-  create_table "projects", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
+  create_table "projects", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
     t.text "description"
     t.date "due_on"
@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 20170829013421) do
     t.index ["user_id"], name: "index_projects_on_user_id"
   end
 
-  create_table "tasks", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
+  create_table "tasks", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
     t.bigint "project_id"
     t.boolean "completed"
@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 20170829013421) do
     t.index ["project_id"], name: "index_tasks_on_project_id"
   end
 
-  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
+  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
