@@ -28,3 +28,4 @@
 .ruby-version
 .generators
 .rakeTasks
+.idea/*
